@@ -155,7 +155,8 @@
     "children": [
       "menu-item#attendance",
       "menu-item#phone",
-      "menu-item#email"
+      "menu-item#email",
+      "social-networks"
     ]
   },
 
@@ -205,7 +206,28 @@
       }
     }
   },
-
+  "social-networks": {
+    "props": {
+      "socialNetworks": [
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/vtextruecloud/"
+        },
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/vtexonline/"
+        },
+        {
+          "name": "pinterest",
+          "url": "https://br.pinterest.com/"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/user/VTEXTV"
+        }
+      ]
+    }
+  },
   "vtex.menu@2.x:menu#footer-help": {
     "props": {
       "orientation": "vertical"
@@ -262,9 +284,10 @@
 
   "menu-item#decoration-mobile": {
     "props": {
+      "blockClass": "titleFooter",
       "itemProps": {
-        "tagTitle": "Decoration",
-        "text": "Decoration"
+        "tagTitle": "Minha conta",
+        "text": "Minha conta"
       }
     },
     "blocks": ["vtex.menu@2.x:submenu.accordion#decoration"]
@@ -278,7 +301,6 @@
       "orientation": "vertical"
     },
     "children": [
-      "menu-item#my-account",
       "menu-item#register",
       "menu-item#my-account-secondary"
     ]
@@ -286,9 +308,10 @@
 
   "menu-item#whereToFind-mobile": {
     "props": {
+      "blockClass": "titleFooter",
       "itemProps": {
-        "tagTitle": "Sale",
-        "text": "Sale"
+        "tagTitle": "Institucional",
+        "text": "Institucional"
       }
     },
     "blocks": ["vtex.menu@2.x:submenu.accordion#sale"]
@@ -302,9 +325,9 @@
       "orientation": "vertical"
     },
     "children": [
-      "menu-item#my-account",
-      "menu-item#register",
-      "menu-item#my-account-secondary"
+      "menu-item#aboutUs",
+      "menu-item#whereToFind",
+      "menu-item#contactUs"
     ]
   },
 

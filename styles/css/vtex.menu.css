@@ -1,0 +1,15 @@
+.styledLinkContent--titleFooter {
+  font-weight: bold;
+  cursor: default;
+  color: black;
+  text-transform: uppercase;
+}
+
+.styledLinkContent{
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.menuItem {
+  margin-top: 1.0rem;
+}

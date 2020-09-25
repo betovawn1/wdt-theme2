@@ -11,12 +11,11 @@
   },
   "flex-layout.row#footer-1-desktop": {
     "children": [
-      "footer-spacer",
+      "logo#desktop",
       "vtex.menu@2.x:menu#Products",
       "vtex.menu@2.x:menu#footer-help",
       "vtex.menu@2.x:menu#footer-decoration",
-      "vtex.menu@2.x:menu#footer-attendance",
-      "social-networks"
+      "vtex.menu@2.x:menu#footer-attendance"
     ],
     "props": {
       "blockClass": "menu-row",
@@ -24,43 +23,32 @@
       "paddingBottom": 3
     }
   },
-
-  "social-networks": {
+  "logo#desktop": {
     "props": {
-      "socialNetworks": [
-        {
-          "name": "Instagram",
-          "url": "https://www.instagram.com/vtextruecloud/"
-        },
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com/vtexonline/"
-        },
-        {
-          "name": "pinterest",
-          "url": "https://br.pinterest.com/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/user/VTEXTV"
-        }
-      ]
+      "blockClass": "logoFooter",
+      "title": "Logo",
+      "href": "/",
+      "url": "https://wedigi.vteximg.com.br/arquivos/logo-decor.png",
+      "width": "100"
     }
   },
-
   "flex-layout.row#footer-2-desktop": {
-    "children": ["accepted-payment-methods"],
+    "children": ["accepted-payment-methods", "image#website-secure"],
     "props": {
       "blockClass": "payment-methods"
     }
   },
   "accepted-payment-methods": {
     "props": {
-      "paymentMethods": ["MasterCard", "Visa", "Diners Club"],
-      "showInColor": "true"
+      "paymentMethods": ["MasterCard", "Visa", "Diners Club"]
     }
   },
-
+  "image#website-secure": {  
+    "props": {
+      "blockClass": "websiteSecure",
+      "src": "assets/compra-segura.jpg"  
+    }  
+  },
   "flex-layout.row#footer-3-desktop": {
     "children": ["rich-text#footer"],
     "props": {
@@ -90,8 +78,8 @@
   },
   "flex-layout.col#footer-1-mobile": {
     "children": [
-      "accepted-payment-methods",
       "social-networks",
+      "accepted-payment-methods",
       "rich-text#footer-mobile"
     ],
     "props": {
@@ -110,7 +98,7 @@
   },
   "rich-text#footer-mobile": {
     "props": {
-      "text": "All stock and product photos are from photos.icons8.com",
+      "text": "© boxdecor. Todos os direitos reservados.",
       "blockClass": "footer"
     }
   }
