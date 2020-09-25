@@ -1,107 +1,80 @@
 {
   "store.home": {
     "blocks": [
-      "list-context.image-list#demo",
-      /* You can make references to blocks defined in other files.
-       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
-      "__fold__.experimentalLazyAssets",
-      "flex-layout.row#deals",
-      "rich-text#shelf-title",
-      "flex-layout.row#shelf",
-      "info-card#home",
-      "rich-text#question",
-      "rich-text#link",
-      "newsletter"
+      "flex-layout.row#slider",
+      "shelf#new-arrivals",
+      "shelf#clearance",
+      "flex-layout.row#newsletter",
+      "rich-text#brands",
+      "flex-layout.row#brands",
+      "rich-text#instagram",
+      "flex-layout.row#instagram"
     ]
   },
 
-  "shelf#home": {
-    "blocks": ["product-summary.shelf"]
-  },
-
-  "list-context.image-list#demo": {
-    "children": ["slider-layout#demo-images"],
+  "carousel#home": {
     "props": {
-      "height": 720,
-      "images": [
+      "autoplay": true,
+      "autoplaySpeed": 4,
+      "banners": [
         {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-principal.png",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
-        },
-        {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner.jpg",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
+          "image": "assets/chrome1.png"
         }
-      ]
-    }
-  },
-  "slider-layout#demo-images": {
-    "props": {
-      "itemsPerPage": {
-        "desktop": 1,
-        "tablet": 1,
-        "phone": 1
-      },
-      "infinite": true,
-      "showNavigationArrows": "desktopOnly",
-      "blockClass": "carousel"
+      ],
+      "height": 440,
+      "showArrows": true,
+      "showDots": true
     }
   },
 
-  "rich-text#shelf-title": {
+  "flex-layout.row#slider": {
+    "children": [
+      // "slider-layout#styles",
+      "carousel#home"
+    ]
+  },
+
+  "flex-layout.row#brands": {
+    "children": [
+      "slider-layout#brands"
+    ],
     "props": {
-      "text": "## Summer",
-      "blockClass": "shelfTitle"
+      "marginTop": 4,
+      "marginBottom": 8
     }
   },
-  "flex-layout.row#shelf": {
-    "children": ["list-context.product-list#demo1"]
-  },
-  "list-context.product-list#demo1": {
+
+  "shelf#new-arrivals": {
     "blocks": ["product-summary.shelf"],
-    "children": ["slider-layout#demo-products"],
     "props": {
-      "orderBy": "OrderByTopSaleDESC"
-    }
-  },
-  "slider-layout#demo-products": {
-    "props": {
-      "itemsPerPage": {
-        "desktop": 5,
-        "tablet": 3,
-        "phone": 1
-      },
-      "infinite": true,
-      "fullWidth": false,
-      "blockClass": "shelf"
+      "orderBy": "OrderByTopSaleDESC",
+      "paginationDotsVisibility": "never",
+      "collection": "139",
+      "productList": {
+        "maxItems": 9,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1.5,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "New arrivals"
+      }
     }
   },
 
-  "info-card#home": {
+  "shelf#clearance": {
+    "blocks": ["product-summary.shelf"],
     "props": {
-      "id": "info-card-home",
-      "isFullModeStyle": false,
-      "textPosition": "left",
-      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
-      "headline": "Clearance Sale",
-      "callToActionText": "DISCOVER",
-      "callToActionUrl": "/sale/d",
-      "blockClass": "info-card-home",
-      "textAlignment": "center"
-    }
-  },
-
-  "rich-text#question": {
-    "props": {
-      "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
-      "blockClass": "question"
-    }
-  },
-
-  "rich-text#link": {
-    "props": {
-      "text": "\n**Reach us at**\nwww.vtex.com.br",
-      "blockClass": "link"
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "140",
+      "paginationDotsVisibility": "desktopOnly",
+      "productList": {
+        "maxItems": 9,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1.5,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Clearance"
+      }
     }
   }
 }

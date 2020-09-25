@@ -1,190 +1,128 @@
 {
   "header": {
-    "blocks": ["header-layout.desktop","header-layout.mobile"]
-  },
-  "header.full": {
-    "blocks": ["header-layout.desktop","header-layout.mobile"]
-  },
- 
-  // Shared blocks between desktop and mobile
-  "image#menu": {
-    "props": {
-      "src": "https://wedigi.vteximg.com.br/arquivos/decor-menu.svg",
-      "alt": "Menu",
-      "maxWidth": "24px",
-      "maxHeight": "24px"
-    }
-  },
-  "image#cart": {
-    "props": {
-      "src": "https://wedigi.vteximg.com.br/arquivos/decor-shopping-cart.svg",
-      "alt": "Shopping cart",
-      "maxWidth": "24px",
-      "maxHeight": "24px"
-    }
-  },
-  "search-bar":{
-    "props": {
-      "hasIconLeft": false,
-      "placeholder": "O que você está procurando?"
-    }
-  },
-
-  // Desktop
-  "header-layout.desktop": {
-    "children": ["sticky-layout#header-desktop", "flex-layout.row#2-desktop"]
-  },
-
-  // first row
-  "sticky-layout#header-desktop": {
-    "props": {
-      "position": "top"
-    },
-    "children": ["flex-layout.row#1-desktop"]
-  },
-  "flex-layout.row#1-desktop": {
-    "children": [
-      "flex-layout.col#logo-desktop",
-      "flex-layout.col#category-desktop",
-      "flex-layout.col#search-desktop",
-      "flex-layout.col#cart-desktop"
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
     ]
   },
-  "flex-layout.col#logo-desktop": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": ["logo#desktop"]
+  "header.full": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
   },
+  "header-layout.desktop": {
+    "children": [
+      "header-row#4-desktop",
+      "header-row#5-desktop"
+    ]
+  },
+
+  "header-row#4-desktop": {
+    "children": [
+      "logo#desktop"
+    ],
+    "props": {
+      "sticky": true,
+      "blockClass": "main-header"
+    }
+  },
+
+  "autocomplete-result-list.v2": {
+    "blocks": ["product-summary.shelf"]
+  },
+  "search-bar": {
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "openAutocompleteOnFocus": true
+    }
+  },
+
+  "header-row#5-desktop": {
+    "children": [
+      "vtex.menu@2.x:menu#category-menu",
+      "header-spacer",
+      "header-spacer",
+      "search-bar",
+      "login",
+      "minicart"
+    ],
+    "props": {
+      "blockClass": "main-topbar"
+    }
+  },
+
   "logo#desktop": {
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://wedigi.vteximg.com.br/arquivos/logo-decor.png",
-      "width": "97"
-    }
-  },
-  "flex-layout.col#category-desktop": {
-    "props": {
-      "horizontalAlign": "center",
-      "verticalAlign": "middle"
-    },
-    "children": ["flex-layout.row#category-desktop"]
-  },
-  "flex-layout.row#category-desktop": {
-    "children": ["flex-layout.col#image-category", "flex-layout.col#text-category"]
-  },
-  "flex-layout.col#image-category":{
-    "props": {
-      "verticalAlign": "middle",
-      "horizontalAlign": "center"
-    },
-    "children": ["image#menu"]
-  },
-  "flex-layout.col#text-category": {
-    "props": {
-      "verticalAlign": "middle",
-      "horizontalAlign": "center"
-    },
-    "children": ["rich-text#text-category"]
-  },
-  "rich-text#text-category": {
-    "props": {
-      "textAlignment": "LEFT",
-      "textPosition": "LEFT",
-      "text": "Todas as categorias",
-      "textColor": "#000"
-    }
-  },
-  "flex-layout.col#search-desktop": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": ["search-bar"]
-  },
-  "flex-layout.col#cart-desktop": {
-    "props": {
-      "verticalAlign": "middle",
-      "horizontalAlign": "center"
-    },
-    "children": ["image#cart"]
-  },
-
-  // second row
-  "flex-layout.row#2-desktop": {
-    "children": ["category-menu"]
-  },
-  "category-menu": {
-    "props": {
-      "showSubcategories": true,
-      "menuDisposition": "center",
-      "departments": ["Major Appliances","Small Appliances", "Electronics", "Orma Carbon"]
+      "url": "https://appliancetheme.vteximg.com.br/arquivos/flatflat-logo-large.png",
+      "width": "110"
     }
   },
 
-  // Mobile
-  "header-layout.mobile":{
-    "children": ["sticky-layout#header-mobile","flex-layout.row#2-mobile"]
+  "minicart": {
+    "blocks": [
+      "product-summary"
+    ],
+    "props": {
+      "type": "popup",
+      "showRemoveButton": true,
+      "showDiscount": true,
+      "showSku": true,
+      "labelMiniCartEmpty": "",
+      "labelButtonFinishShopping": "Go to checkout",
+      "enableQuantitySelector": true,
+      "maxQuantity": 10,
+      "labelClasses": "gray"
+    }
   },
 
-  // first row
-  "sticky-layout#header-mobile": {
-    "props": {
-      "position": "top"
-    },
-    "children": ["flex-layout.row#1-mobile"]
-  },
-  "flex-layout.row#1-mobile": {
+  "header-layout.mobile": {
     "children": [
-      "flex-layout.col#category-mobile",
-      "flex-layout.col#logo-mobile",
-      "flex-layout.col#cart-mobile"
+      "header-row#1-mobile"
     ]
   },
-  "flex-layout.col#category-mobile": {
+
+
+  "header-row#1-mobile": {
+    "children": [
+      "drawer",
+      "logo#mobile",
+      "header-spacer",
+      "header-spacer",
+      "minicart"
+    ],
     "props": {
-      "horizontalAlign": "center",
-      "verticalAlign": "middle"
-    },
-    "children": ["image#menu-mobile"]
-  },
-  "image#menu-mobile": {
-    "props": {
-      "src": "https://wedigi.vteximg.com.br/arquivos/decor-menu.svg",
-      "alt": "Shopping cart",
-      "maxWidth": "24px",
-      "maxHeight": "24px"
+      "sticky": true,
+      "blockClass": "main-header-mobile"
     }
   },
-  "flex-layout.col#logo-mobile": {
-    "props": {
-      "horizontalAlign": "center",
-      "verticalAlign": "middle"
-    },
-    "children": ["logo#mobile"]
+
+  "drawer": {
+    "children": [
+      "menu#drawer"
+    ]
   },
+
+  "menu#drawer": {
+    "children": [
+      "menu-item#category-electronics",
+      "menu-item#category-major-appliances",
+      "menu-item#category-small-appliances",
+      "menu-item#login"
+    ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
   "logo#mobile": {
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://wedigi.vteximg.com.br/arquivos/logo-decor.png",
-      "width": "97"
+      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
+      "width": "70"
     }
-  },
-  "flex-layout.col#cart-mobile": {
-    "props": {
-      "verticalAlign": "middle",
-      "horizontalAlign": "center"
-    },
-    "children": ["image#cart"]
-  },
-  // second row
-  "flex-layout.row#2-mobile": {
-    "children": [
-      "flex-layout.col#search-mobile"
-    ]
-  },
-  "flex-layout.col#search-mobile": {
-    "children": ["search-bar"]
   }
 }

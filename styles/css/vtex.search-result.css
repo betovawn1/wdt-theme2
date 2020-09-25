@@ -1,0 +1,79 @@
+.resultGallery {
+  margin-bottom: 35px;
+}
+
+.filterItem {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.filterTitle {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.filter__container--title {
+  display: none;
+}
+
+.filtersWrapper {
+  padding: 20px;
+}
+
+.galleryTitle--layout {
+  margin: 0;
+}
+
+.gallery {
+  padding: 0;
+  margin-top: -1px;
+  border-top: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+}
+
+.galleryItem {
+  //border: 1px solid #dedede;
+  border-left: 0;
+  border-top: 0;
+  padding:0;
+}
+
+.buttonShowMore {
+  padding: 30px;
+  border-left: 1px solid #dedede;
+  border-top: 1px solid #dedede;
+  margin-top: 11px;
+}
+
+.filterPopupTitle {
+  font-weight: bold;
+  padding: 0 0 0 10px;
+}
+
+@media(min-width: 991px) {
+  .totalProducts--layout {
+    padding-left: 15px;
+    padding-top: 19px;
+  }
+}
+
+@media(max-width: 767px) {
+  .galleryTitle--layout {
+    position: absolute;
+    font-size: 18px;
+    display: flex;
+    height: 15vh;
+    padding-left: 15px;
+    align-items: center;
+  }
+
+  .orderByDropdown {
+    background: transparent;
+    padding-top: 0;
+  }
+
+  .totalProducts--layout {
+    border-color: #dedede;
+  }
+}

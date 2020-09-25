@@ -7,178 +7,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [3.38.0] - 2020-09-10
-### Added
-- `disclosure-layout` example.
+## [1.3.0] - 2020-07-16
 
-### Removed
-- `public` folder.
-
-## [3.37.2] - 2020-07-30
-### Fixed
-- Active **background** `action-secondary` color from `#dbe9fd` to `#d2defc`
-- Active **border** `action-secondary` color from `#dbe9fd` to `#d2defc`
-
-## [3.37.1] - 2020-07-08
-
-### Changed
-- Change URL of the docs in README
-
-## [3.37.0] - 2020-05-18
-### Changed
-- PreventRouteChange to `false`.
-
-## [3.36.0] - 2020-05-11
-### Added
-- Add input values for recursive assemblies
-
-## [3.35.0] - 2020-04-13
-### Added
-- `aspectRatio` and `maxHeight` on `product-summary-image#shelf`.
-
-### Fixed
-- Some styles on product summary and price components.
-
-## [3.34.0] - 2020-04-07
-### Added
-- `fetch-more` and `fetch-previous` buttons on mobile.
-
-## [3.33.0] - 2020-04-02
-### Changed
-- Price blocks on `product-summary` and on the PDP to use the new blocks from `vtex.product-price`
-- Product title style on PDP.
-
-## [3.32.0] - 2020-03-20
-### Changed
-- Use `__fold__.experimentalLazyAssets` on home.
-
-## [3.31.0] - 2020-03-19
-### Added
-- `product-gifts` block to `store.product`.
-
-## [3.30.1] - 2020-03-06
-### Fixed
-- Fix version of the app.
-
-## [3.29.0] - 2020-03-06
-
-## [3.28.0] - 2020-03-05
-### Added
-- `__fold__` blocks on home.
-- `aspectRatio` prop on `product-images`.
-
-## [3.27.0] - 2020-03-03
-### Added
-- `store.not-found#search` block.
-
-## [3.26.1] - 2020-02-20
-### Changed
-- Limit the width of the search bar input instead of its container.
-
-### Fixed
-- Logo animation when header sticks to the top of the page.
+## [1.2.0] - 2020-07-16
 
 ### Added
-- `prefers-reduced-motion` query to remove animation for users which don't want unnecessary animations.
 
-## [3.26.0] - 2020-02-18
-### Changed
-- Refactor the `header` with native IO blocks.
+- `did-you-mean`, `suggestion` and `banner` blocks.
 
-### Added
-- Animations to the `header` when it sticks to the top of the page.
+## [1.1.0] - 2020-07-15
 
-## [3.25.0] - 2020-02-06
-### Changed
-- `vtex.carousel` in favor of using `list-context.image-list` and `slider-layout`.
-- `vtex.shelf` in favor of using `list-context.product-list` and `slider-layout`.
+## [1.0.1] - 2020-07-15
 
-## [3.24.0] - 2020-02-05
-### Added
-- `height` on `product-summary-image`
+## [0.0.2] - 2020-04-02
 
-## [3.23.2] - 2020-02-03
-### Changed
-- Make search use cold prices by default.
-
-## [3.23.1] - 2020-01-27
-### Fixed
-- Use default `minicart.v2` from `vtex.minicart`.
-
-## [3.23.0] - 2020-01-27
-### Added
-- `store.not-found#product` block.
-
-## [3.22.0] - 2020-01-23
-### Added
-- `product-bookmark` blocks.
-
-## [3.21.2] - 2020-01-22
-### Fixed
-- Layout on search pages with few results but a big filter sidebar.
-
-## [3.21.1] - 2019-12-27
-### Fixed
-- Use docs builder.
-
-## [3.21.0] - 2019-12-20
-### Added
-- `showValueNameForImageVariation` to `sku-selector`.
-
-### Changed
-- Remove product-identifier.
-
-## [3.20.2] - 2019-12-19
-### Fixed
-- Menu links and layout
-
-## [3.20.1] - 2019-12-18
-### Changed
-- Use `styles-builder@2.x`.
-
-## [3.20.0] - 2019-12-17
-### Changed
-- Use new flexible `minicart.v2` and `add-to-cart-button`.
-
-### Added
-- Custom CSS styles for `product-identifier`.
-
-## [3.20.0-beta.0] - 2019-12-11
-
-## [3.20.0-beta] - 2019-12-06
-
-## [3.19.2] - 2019-12-16
-### Fixed
-- `minItemsPerPage` prop in `shelf#home` block.
-
-## [3.19.1] - 2019-12-03
-
-## [3.18.2] - 2019-12-03
-### Fixed
-- Add missing dependencies
-
-## [3.18.1] - 2019-11-11
-### Fixed
-- Use the proper API to space SKU Selector
-
-## [3.18.0] - 2019-11-11
-### Fixed
-- Product page spacing issues.
-
-### Added
-- Product description.
-
-## [3.17.2] - 2019-11-08
-### Added
-- Use `skusFilter` `FIRST_AVAILABLE` value.
-
-## [3.17.1] - 2019-11-06
-### Fixed
-- Remove usage of deprecated selectors.
-
-## [3.17.0] - 2019-11-06
-### Changed
-- PreventRouteChange to `true`.
+## [3.16.20] - 2019-11-29
 
 ## [3.16.2] - 2019-10-17
 

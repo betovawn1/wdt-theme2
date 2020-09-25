@@ -1,1 +1,0 @@
-# wdt-theme2

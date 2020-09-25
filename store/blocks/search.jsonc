@@ -1,69 +1,21 @@
 {
   "store.search": {
-    "blocks": ["search-result-layout"],
-    "props": {
-      "context": {
-        "skusFilter": "ALL",
-        "simulationBehavior": "skip"
-      }
-    }
+    "blocks": ["search-result-layout#search"]
   },
 
-  "store.search#brand": {
-    "blocks": ["search-result-layout"],
-    "props": {
-      "context": {
-        "orderByField": "OrderByReleaseDateDESC",
-        "hideUnavailableItems": true,
-        "maxItemsPerPage": 10,
-        "skusFilter": "ALL",
-        "simulationBehavior": "skip"
-      }
-    }
-  },
-
-  "store.search#department": {
-    "blocks": ["search-result-layout"],
-    "props": {
-      "context": {
-        "skusFilter": "ALL",
-        "simulationBehavior": "skip"
-      }
-    }
-  },
-
-  "store.search#category": {
-    "blocks": ["search-result-layout"],
-    "props": {
-      "context": {
-        "skusFilter": "ALL",
-        "simulationBehavior": "skip"
-      }
-    }
-  },
-
-  "store.search#subcategory": {
-    "blocks": ["search-result-layout"],
-    "props": {
-      "context": {
-        "skusFilter": "ALL",
-        "simulationBehavior": "skip"
-      }
-    }
-  },
-
-  "search-result-layout": {
+  "search-result-layout#search": {
     "blocks": [
       "search-result-layout.desktop",
-      "search-result-layout.mobile",
       "search-not-found-layout"
     ]
   },
-
   "search-result-layout.desktop": {
     "children": [
       "flex-layout.row#searchbread",
       "flex-layout.row#searchtitle",
+      "flex-layout.row#did-you-mean",
+      "flex-layout.row#suggestion",
+      "flex-layout.row#banner-one",
       "flex-layout.row#result"
     ],
     "props": {
@@ -75,16 +27,6 @@
       }
     }
   },
-  "flex-layout.row#searchbread": {
-    "children": ["breadcrumb.search"],
-    "props": {
-      "preserveLayoutOnMobile": true,
-      "fullWidth": true
-    }
-  },
-  "flex-layout.row#searchtitle": {
-    "children": ["search-title.v2"]
-  },
   "flex-layout.row#result": {
     "children": ["flex-layout.col#filter", "flex-layout.col#content"],
     "props": {
@@ -92,10 +34,126 @@
       "fullWidth": true
     }
   },
+
+  "flex-layout.row#searchtitle": {
+    "props": {
+      "blockClass": "search-title"
+    },
+    "children": [
+      "flex-layout.row#searchbread", 
+      "flex-layout.row#title"
+    ]
+  },
+
+  "flex-layout.row#did-you-mean": {
+    "children": ["did-you-mean"]
+  },
+  "flex-layout.row#suggestion": {
+    "children": ["search-suggestions"]
+  },
+  "flex-layout.row#banner-one": {
+    "children": ["search-banner#one"]
+  },
+  "search-banner#one": {
+    "props": {
+      "area": "one",
+      "blockClass": "myBanner",
+      "horizontalAlignment": "center"
+    }
+  },
+  "flex-layout.row#searchbread": {
+    "children": ["breadcrumb.search"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#title": {
+    "children": ["search-title.v2"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "store.search#brand": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 10
+      }
+    }
+  },
+  "store.search#department": {
+    "blocks": ["search-result-layout#department"]
+  },
+
+  "store.search#category": {
+    "blocks": ["search-result-layout#cat"]
+  },
+
+  "store.search#subcategory": {
+    "blocks": ["search-result-layout#cat"]
+  },
+
+  "search-result-layout#department": {
+    "blocks": [
+      "search-result-layout.desktop#dep",
+      "search-result-layout.mobile#dep",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout#cat": {
+    "blocks": [
+      "search-result-layout.desktop#cat",
+      "search-result-layout.mobile#cat",
+      "search-not-found-layout"
+    ]
+  },
+
+  "search-result-layout.desktop#dep": {
+    "children": [
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#depBanner",
+      "flex-layout.row#result"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "search-products-count-per-page": "12",
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  },
+  "search-result-layout.desktop#cat": {
+    "children": [
+      "flex-layout.row#searchbread",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#result"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  },
   "flex-layout.col#filter": {
     "children": ["filter-navigator.v3"],
     "props": {
       "blockClass": "filterCol"
+    }
+  },
+  "order-by": {
+    "props": {
+      "hiddenOptions": [
+        "OrderByReleaseDateDESC",
+        "OrderByNameASC",
+        "OrderByNameDESC"
+      ]
     }
   },
   "flex-layout.col#content": {
@@ -106,11 +164,13 @@
       "flex-layout.row#fetchmore"
     ],
     "props": {
-      "width": "grow",
-      "preventVerticalStretch": true
+      "width": "grow"
     }
   },
   "flex-layout.row#searchinfo": {
+    "props": {
+      "blockClass": "search-info"
+    },
     "children": ["flex-layout.col#productCount", "flex-layout.col#orderby"]
   },
   "flex-layout.col#productCount": {
@@ -127,13 +187,14 @@
   },
   "flex-layout.row#fetchprevious": {
     "props": {
-      "marginBottom": 3
+      "blockClass": "fetch-previous",
+      "marginBottom": 0
     },
     "children": ["search-fetch-previous"]
   },
   "flex-layout.row#fetchmore": {
     "props": {
-      "marginTop": 3
+      "marginTop": 0
     },
     "children": ["search-fetch-more"]
   },
@@ -144,14 +205,54 @@
     "blocks": ["gallery", "not-found"]
   },
 
-  "search-result-layout.mobile": {
+  "flex-layout.row#depBanner": {
+    "children": [
+      "image#depbanner"
+    ]
+  },
+  "image#depbanner": {
+    "props": {
+      "src": "https://wedigi.vteximg.com.br/arquivos/dep-banner.jpg?1",
+      "width": "1920",
+      "height": "400"
+    }
+  },
+  "search-result-layout.mobile#dep": {
+    "children": [
+      "flex-layout.row#title",
+      "flex-layout.row#depBannerMobile",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#searchbread",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  },
+  "flex-layout.row#depBannerMobile": {
+    "children": [
+      "image#depbannerMobile"
+    ]
+  },
+  "image#depbannerMobile": {
+    "props": {
+      "blockClass": "dep-image-mobile",
+      "src": "https://wedigi.vteximg.com.br/arquivos/dep-banner-mobile.jpg",
+      "width": "575",
+      "height": "168"
+    }
+  },
+  "search-result-layout.mobile#cat": {
     "children": [
       "flex-layout.row#searchinfomobile",
       "flex-layout.row#searchbread",
       "flex-layout.row#productCountMobile",
-      "flex-layout.row#fetchprevious",
-      "flex-layout.row#contentmobile",
-      "flex-layout.row#fetchmore"
+      "flex-layout.row#contentmobile"
     ],
     "props": {
       "pagination": "show-more",
@@ -170,14 +271,14 @@
 
   "flex-layout.row#searchinfomobile": {
     "children": [
-      "flex-layout.col#orderByMobile",
       "flex-layout.col#filterMobile",
+      "flex-layout.col#orderByMobile",
       "flex-layout.col#switcherMobile"
     ],
     "props": {
       "preserveLayoutOnMobile": true,
       "colSizing": "auto",
-      "colJustify": "around"
+      "colJustify": "between"
     }
   },
 
@@ -225,6 +326,14 @@
   },
 
   "gallery": {
+    "props": {
+      "paddingLeft": "0",
+      "maxItemsPerRow": { 
+        "desktop": "4", 
+        "tablet": "3", 
+        "phone": "2"
+      }
+    },
     "blocks": ["product-summary.shelf"]
   }
 }
