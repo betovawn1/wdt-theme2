@@ -1,33 +1,17 @@
 .flexRowContent--menu-link,
 .flexRowContent--main-header {
-  padding: 0 0.5rem;
+  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: #fff;
 }
-
-@media screen and (min-width: 40em) {
-  .flexRowContent--menu-link,
-  .flexRowContent--main-header {
-    padding: 0 1rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .flexRowContent--menu-link,
-  .flexRowContent--main-header {
-    padding: 0 0.25rem;
-  }
-}
-
 .flexRowContent--menu-link {
   background-color: #03044e;
   color: #fff;
 }
 
-.flexRowContent--main-header {
-  background-color: #f0f0f0;
-}
-
 .flexRowContent--main-header-mobile {
   align-items: center;
-  padding: 0.625rem 0.5rem;
   background-color: #f0f0f0;
 }
 
@@ -52,6 +36,22 @@
 .flexRow--deals .flexCol {
   align-items: center;
 }
+
+.flexCol{
+  border: 1px solid #dedede;
+}
+
+.flexCol .flexCol{
+  border: none;
+}
+
+/* header .flexCol{
+  border-right: 0;
+} */
+
+/* .flexRowContent--main-header .flexCol .flexCol{
+  border: 0;
+} */
 
 .flexCol--filterCol {
   max-width: 500px;
