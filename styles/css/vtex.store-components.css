@@ -1,3 +1,7 @@
+.container .container.wrapper.wrapper--stuck{
+  background: #fff;
+}
+
 .notificationBarContainer {
   background-color: #e6f1e6;
   color: #03034e;

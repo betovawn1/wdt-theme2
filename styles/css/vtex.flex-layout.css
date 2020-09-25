@@ -5,6 +5,11 @@
   padding-bottom: 0;
   background: #fff;
 }
+
+.flexRowContent--main-header .vtex-store-components-3-x-container{
+  background: #fff;
+}
+
 .flexRowContent--menu-link {
   background-color: #03044e;
   color: #fff;

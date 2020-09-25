@@ -5,13 +5,7 @@
   "header.full": {
     "blocks": ["header-layout.desktop","header-layout.mobile"]
   },
-  "header-layout.desktop": {
-    "children": ["sticky-layout#header-desktop"]
-  },
-  "header-layout.mobile":{
-    "children": ["sticky-layout#header-mobile","flex-layout.row#2-mobile"]
-  },
-
+ 
   // Shared blocks between desktop and mobile
   "image#menu": {
     "props": {
@@ -31,11 +25,17 @@
   },
   "search-bar":{
     "props": {
-      "hasIconLeft": false
+      "hasIconLeft": false,
+      "placeholder": "O que você está procurando?"
     }
   },
 
   // Desktop
+  "header-layout.desktop": {
+    "children": ["sticky-layout#header-desktop", "flex-layout.row#2-desktop"]
+  },
+
+  // first row
   "sticky-layout#header-desktop": {
     "props": {
       "position": "top"
@@ -109,8 +109,24 @@
     },
     "children": ["image#cart"]
   },
+
+  // second row
+  "flex-layout.row#2-desktop": {
+    "children": ["category-menu"]
+  },
+  "category-menu": {
+    "props": {
+      "showSubcategories": true,
+      "menuDisposition": "center",
+      "departments": ["Major Appliances","Small Appliances", "Electronics", "Orma Carbon"]
+    }
+  },
+
   // Mobile
-  
+  "header-layout.mobile":{
+    "children": ["sticky-layout#header-mobile","flex-layout.row#2-mobile"]
+  },
+
   // first row
   "sticky-layout#header-mobile": {
     "props": {
