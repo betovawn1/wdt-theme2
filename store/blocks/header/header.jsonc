@@ -6,10 +6,10 @@
     "blocks": ["header-layout.desktop","header-layout.mobile"]
   },
   "header-layout.desktop": {
-    "children": ["flex-layout.row#1-desktop"]
+    "children": ["sticky-layout#header-desktop"]
   },
   "header-layout.mobile":{
-    "children": ["flex-layout.row#1-mobile", "flex-layout.row#2-mobile"]
+    "children": ["sticky-layout#header-mobile","flex-layout.row#2-mobile"]
   },
 
   // Shared blocks between desktop and mobile
@@ -36,6 +36,12 @@
   },
 
   // Desktop
+  "sticky-layout#header-desktop": {
+    "props": {
+      "position": "top"
+    },
+    "children": ["flex-layout.row#1-desktop"]
+  },
   "flex-layout.row#1-desktop": {
     "children": [
       "flex-layout.col#logo-desktop",
@@ -106,6 +112,12 @@
   // Mobile
   
   // first row
+  "sticky-layout#header-mobile": {
+    "props": {
+      "position": "top"
+    },
+    "children": ["flex-layout.row#1-mobile"]
+  },
   "flex-layout.row#1-mobile": {
     "children": [
       "flex-layout.col#category-mobile",
