@@ -171,3 +171,13 @@
   }
   
 }
+
+.logoLink{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageElement--websiteSecure{
+  margin-left: auto;
+} 

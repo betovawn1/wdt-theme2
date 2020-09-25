@@ -1,3 +1,12 @@
+.flexRow--main-row-header {
+  width: 100% !important;
+}
+.flexRowContent--main-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .flexRow--deals {
   background-color: #a7afbd;
   padding: 14px 0px;
@@ -114,4 +123,63 @@
 
 .flexRow--product-main {
   border-top: 1px solid #dedede;
+}
+
+.flexRow--payment-methods{
+  margin-top: 34px;
+  border-top: solid 0.5px;
+  border-bottom: solid 0.5px;
+  border-color: #AAAAAA;
+  padding: 30px 0px 30px 0px;
+}
+
+.flexRow--credits{
+  padding: 15px 0px 15px 0px;
+}
+
+.flexRow--menu-row{
+  margin-top: 34px;
+  border-top: solid 0.5px;
+  border-color: #AAAAAA;
+} 
+
+.socialNetworksContainer {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 768px){
+  .socialNetworksContainer {
+    justify-content: center;
+  }
+
+  .acceptedPaymentMethodContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flexCol--payment-methods{
+    border: none;
+  }
+}
+
+.acceptedPaymentMethodContainer{
+  display: flex;
+  align-items: center;
+} 
+
+.logoLink{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageElement--websiteSecure{
+  margin-left: 480px;
+} 
+
+.flexRow--credits {
+  padding: 0 5px;
 }

@@ -4,68 +4,102 @@
   },
   "footer-layout.desktop": {
     "children": [
-      "flex-layout.row#footer-1-desktop"
+      "flex-layout.row#footer-1-desktop",
+      "flex-layout.row#footer-2-desktop",
+      "flex-layout.row#footer-3-desktop"
     ]
   },
   "flex-layout.row#footer-1-desktop": {
     "children": [
-      "flex-layout.col#footer-left-desktop",
-      "flex-layout.col#footer-right-desktop"
+      "logo#desktop",
+      "vtex.menu@2.x:menu#Products",
+      "vtex.menu@2.x:menu#footer-help",
+      "vtex.menu@2.x:menu#footer-decoration",
+      "vtex.menu@2.x:menu#footer-attendance"
     ],
     "props": {
-      "blockClass": "footer-row",
-      "paddingTop": 7,
-      "paddingBottom": 7
+      "blockClass": "menu-row",
+      "paddingTop": 6,
+      "paddingBottom": 3
     }
   },
-
-  "flex-layout.col#footer-left-desktop": {
-    "children": ["vtex.menu@2.x:menu#category-menu"],
+  "logo#desktop": {
     "props": {
-      "blockClass": "footer-menu"
+      "blockClass": "logoFooter",
+      "title": "Logo",
+      "href": "/",
+      "url": "https://wedigi.vteximg.com.br/arquivos/logo-decor.png",
+      "width": "100"
     }
   },
-
-  "flex-layout.col#footer-right-desktop": {
-    "children": ["accepted-payment-methods"],
+  "flex-layout.row#footer-2-desktop": {
+    "children": ["accepted-payment-methods", "image#website-secure"],
     "props": {
-      "blockClass": "footer-payment-methods"
+      "blockClass": "payment-methods"
     }
   },
-
   "accepted-payment-methods": {
     "props": {
       "paymentMethods": ["MasterCard", "Visa", "Diners Club"]
     }
   },
+  "image#website-secure": {  
+    "props": {
+      "blockClass": "websiteSecure",
+      "src": "assets/compra-segura.jpg"  
+    }  
+  },
+  "flex-layout.row#footer-3-desktop": {
+    "children": ["rich-text#footer"],
+    "props": {
+      "blockClass": "credits"
+    }
+  },
+  "rich-text#footer": {
+    "props": {
+      "text": "© boxdecor. Todos os direitos reservados.",
+      "blockClass": "footer"
+    }
+  },
+
   "footer-layout.mobile": {
-
     "children": [
-      "flex-layout.row#mid-footer"
+      "flex-layout.row#1-footer-mobile",
+      "flex-layout.row#2-footer-mobile"
     ]
   },
-  "flex-layout.row#mid-footer": {
+  "flex-layout.row#2-footer-mobile": {
+    "children": ["flex-layout.col#footer-1-mobile"],
     "props": {
-      "blockClass": "footer-row"
-    },
-    "children": [
-      "flex-layout.col#colFoot"
-    ]
+      "blockClass": "payment-methods",
+      "paddingTop": 4,
+      "paddingBottom": 4
+    }
   },
-
-  "flex-layout.col#colFoot": {
+  "flex-layout.col#footer-1-mobile": {
     "children": [
-      "vtex.menu@2.x:menu#footer"
-    ]
-  },
-  "vtex.menu@2.x:menu#footer": {
+      "social-networks",
+      "accepted-payment-methods",
+      "rich-text#footer-mobile"
+    ],
     "props": {
-      "orientation": "vertical"
+      "blockClass": "payment-methods",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "rowGap": 4
+    }
+  },
+  "flex-layout.row#1-footer-mobile": {
+    "props": {
+      "paddingTop": 4,
+      "paddingBottom": 4
     },
-    "children": [
-      "menu-item#category-electronics",
-      "menu-item#category-major-appliances",
-      "menu-item#category-small-appliances"
-    ]
+    "children": ["vtex.menu@2.x:menu#footer-mobile"]
+  },
+  "rich-text#footer-mobile": {
+    "props": {
+      "text": "© boxdecor. Todos os direitos reservados.",
+      "blockClass": "footer"
+    }
   }
 }

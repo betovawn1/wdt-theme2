@@ -3,34 +3,14 @@
     "blocks": [
       "flex-layout.row#slider",
       "shelf#new-arrivals",
-      "shelf#clearance",
-      "flex-layout.row#newsletter",
-      "rich-text#brands",
-      "flex-layout.row#brands",
-      "rich-text#instagram",
-      "flex-layout.row#instagram"
+      "shelf#clearance"
     ]
-  },
-
-  "carousel#home": {
-    "props": {
-      "autoplay": true,
-      "autoplaySpeed": 4,
-      "banners": [
-        {
-          "image": "assets/chrome1.png"
-        }
-      ],
-      "height": 440,
-      "showArrows": true,
-      "showDots": true
-    }
   },
 
   "flex-layout.row#slider": {
     "children": [
       // "slider-layout#styles",
-      "carousel#home"
+      // "carousel#home"
     ]
   },
 
@@ -52,7 +32,7 @@
       "collection": "139",
       "productList": {
         "maxItems": 9,
-        "itemsPerPage": 3,
+        "itemsPerPage": 5,
         "minItemsPerPage": 1.5,
         "scroll": "BY_PAGE",
         "arrows": true,
@@ -69,7 +49,7 @@
       "paginationDotsVisibility": "desktopOnly",
       "productList": {
         "maxItems": 9,
-        "itemsPerPage": 3,
+        "itemsPerPage": 5,
         "minItemsPerPage": 1.5,
         "scroll": "BY_PAGE",
         "arrows": true,

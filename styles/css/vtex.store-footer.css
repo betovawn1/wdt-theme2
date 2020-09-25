@@ -1,0 +1,26 @@
+.socialNetworksContainer {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  
+  @media screen and (max-width: 768px){
+    .socialNetworksContainer {
+      justify-content: center;
+    }
+  
+    .acceptedPaymentMethodContainer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .flexCol--payment-methods{
+      border: none;
+    }
+  }
+  
+  .acceptedPaymentMethodContainer{
+    display: flex;
+    align-items: center;
+  } 
