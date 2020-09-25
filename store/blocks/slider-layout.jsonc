@@ -1,0 +1,96 @@
+{
+    "slider-layout#home": {
+        "children": ["infocard#brand1", "infocard#brand2","infocard#brand3","infocard#brand4","infocard#brand5","infocard#brand6", "infocard#brand7"],
+        "props": {
+            "autoplay": {
+            "timeout": 7000,
+            "stopOnHover": true
+            },
+            "showNavigationArrows": "desktopOnly",
+            "itemsPerPage": {
+              "desktop": 5,
+              "tablet": 4,
+              "phone": 3
+            }
+        }
+    },
+
+    "infocard#brand1": {
+        "props": {
+        "isFullModeStyle": false,
+        "textPosition": "right",
+        "imageUrl": "https://wedigi.vtexassets.com/arquivos/001-washing-machine.png",
+        "maxWidth": "25%",
+        "headline": "Máquina de lavar",
+        "textAlignment": "center"
+        }
+    },
+
+    "infocard#brand2": {
+      "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "https://wedigi.vtexassets.com/arquivos/015-microwave.png",
+      "maxWidth": "25%",
+      "headline": "Microondas",
+      "textAlignment": "center"
+      }
+    },
+
+    "infocard#brand3": {
+      "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "https://wedigi.vtexassets.com/arquivos/001-washing-machine.png",
+      "maxWidth": "25%",
+      "headline": "Microondas",
+      "textAlignment": "center"
+      }
+    },
+
+    "infocard#brand4": {
+      "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "https://wedigi.vtexassets.com/arquivos/015-microwave.png",
+      "maxWidth": "25%",
+      "headline": "Microondas",
+      "textAlignment": "center"
+    }
+  },
+    
+    "infocard#brand5": {
+      "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "https://wedigi.vtexassets.com/arquivos/001-washing-machine.png",
+      "maxWidth": "25%",
+      "headline": "Microondas",
+      "textAlignment": "center"
+    }
+  },
+
+    "infocard#brand6": {
+      "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "https://wedigi.vtexassets.com/arquivos/015-microwave.png",
+      "maxWidth": "25%",
+      "headline": "Microondas",
+      "textAlignment": "center"
+    }
+  },
+
+    "infocard#brand7": {
+      "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "https://wedigi.vtexassets.com/arquivos/001-washing-machine.png",
+      "maxWidth": "25%",
+      "headline": "Microondas",
+      "textAlignment": "center"
+    }
+  }
+
+  
+}

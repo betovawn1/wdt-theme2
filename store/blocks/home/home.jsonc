@@ -2,16 +2,20 @@
   "store.home": {
     "blocks": [
       "list-context.image-list#demo",
+      "slider-layout#home",
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "__fold__.experimentalLazyAssets",
-      "flex-layout.row#deals",
+    //  "flex-layout.row#deals",
       "rich-text#shelf-title",
       "flex-layout.row#shelf",
-      "info-card#home",
-      "rich-text#question",
-      "rich-text#link",
-      "newsletter"
+      "stack-layout#cta",
+      "rich-text#shelf-title2",
+      "flex-layout.row#shelf2",
+      "info-card#home"
+     // "rich-text#question",
+     // "rich-text#link",
+     // "newsletter"
     ]
   },
 
@@ -25,13 +29,16 @@
       "height": 720,
       "images": [
         {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-principal.png",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
+          "image": "https://wedigi.vteximg.com.br/arquivos/banner-home.jpg?5",
+          "mobileImage": "https://wedigi.vtexassets.com/arquivos/banner-home-mobile.jpg?3",
+          "width": "100%"
         },
         {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner.jpg",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
+          "image": "https://wedigi.vtexassets.com/arquivos/banner-home.jpg?3",
+          "mobileImage": "https://wedigi.vtexassets.com/arquivos/banner-home-mobile.jpg?4",
+          "width": "100%"
         }
+        
       ]
     }
   },
@@ -50,7 +57,7 @@
 
   "rich-text#shelf-title": {
     "props": {
-      "text": "## Summer",
+      "text": "## **PRODUTOS EM DESTAQUE**",
       "blockClass": "shelfTitle"
     }
   },
@@ -77,6 +84,34 @@
     }
   },
 
+  "stack-layout#cta": { 
+    "children": [
+      "image#cta",
+      "link#cta"
+    ]
+  },
+
+   "image#cta": {
+       "props": { 
+         "blockClass": "cover",
+         "width": "100%",
+         "height": 400,
+         "src": "assets/images/cooktop.jpg",
+         "mobileImage": "assets/images/cooktop-mobile.jpg"
+       }
+     },
+     "link#cta": { 
+       "props": {
+         "displayMode": "button",
+         "buttonProps": {
+           "variant": "primary",
+           "size": "large" 
+         },
+         "href": "/washer",
+         "label": "VEJA MAIS"
+       }
+  },
+
   "info-card#home": {
     "props": {
       "id": "info-card-home",
@@ -88,6 +123,35 @@
       "callToActionUrl": "/sale/d",
       "blockClass": "info-card-home",
       "textAlignment": "center"
+    }
+  },
+
+  "rich-text#shelf-title2": {
+    "props": {
+      "text": "## **MAIS VENDIDOS**",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "flex-layout.row#shelf2": {
+    "children": ["list-context.product-list#demo1"]
+  },
+  "list-context.product-list#demo2": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#demo-products2": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
     }
   },
 
